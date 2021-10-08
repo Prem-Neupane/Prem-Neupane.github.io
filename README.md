@@ -9,4 +9,4 @@
 
 ![Personal portfolio Website](https://raw.githubusercontent.com/Prem-Neupane/web_portfolio-personal/website-view.webp)
 
-Please hit me up at avsingh@umass.edu if you have any feedback or ideas for the website. Leave a :star: &nbsp;if you like it!
+Please hit me up at premneupane.com.np if you have any feedback or ideas for the website. Leave a :star: &nbsp;if you like it!
