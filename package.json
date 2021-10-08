@@ -24,7 +24,7 @@
     "typed.js": "^2.0.11"
   },
   "scripts": {
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "direct-deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
