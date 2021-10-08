@@ -1,7 +1,7 @@
 {
-  "name": "personal-website",
-  "author": "Aditya Vikram Singh",
-  "homepage": "https://AVS1508.github.io/",
+  "name": "portfolio-website",
+  "author": "Prem Neupane",
+  "homepage": "https://Prem-Neupane.github.io/",
   "version": "1.0.5",
   "private": true,
   "dependencies": {
