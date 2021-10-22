@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare, faBehanceSquare, faLinkedin, faFacebookSquare, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare, faLinkedin, faFacebookSquare, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 class Footer extends React.Component {
     constructor() {

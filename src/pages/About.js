@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 import TitleBar from "../components/TitleBar";
 import ProfessionalHeadshot from "../assets/webp/premneupane.webp";

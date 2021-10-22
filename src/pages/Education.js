@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 
 import EducationCard from "../components/EducationCard";
-import CourseworkButton from "../components/CourseworkButton";
+// import CourseworkButton from "../components/CourseworkButton";
 import TitleBar from "../components/TitleBar";
 
 import NepathyaCollegeLogo from "../assets/webp/nepathyacollege.webp";
