@@ -61,5 +61,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Prem-Neupane/Prem-Neupane.github.io/issues"
-  }
+  },
+  "devDependencies": {}
 }
