@@ -90,7 +90,7 @@ class About extends React.Component {
               >
                 <FontAwesomeIcon icon={faFileAlt} /> Résumé
               </Button>
-              {/* <Button className="resume-btn" href="https://www.adityavsingh.com/old-personal-website" target="_blank" size="lg">
+              {/* <Button className="resume-btn" href="https://www.premneupane.com.np/" target="_blank" size="lg">
                                 <FontAwesomeIcon icon={faGlobe} /> Old Website
                             </Button> */}
             </Row>
