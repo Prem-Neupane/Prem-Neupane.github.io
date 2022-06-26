@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /CNAME
+Sitemap: https://www.premneupane.com.np/sitemap.xml
