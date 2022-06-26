@@ -5,10 +5,10 @@ import Typed from "typed.js";
 class Introduction extends React.Component {
   componentDidMount() {
     this.typed_options = {
-      // strings: ["Mid Level Web Developer @ Webroot","Full-Stack Web Developer"],
+      strings: ["Software Engineer", "Web Developer", "A Freelancer"],
       // strings: ["Mid Level Web Developer @ Webroot"],
-      strings: ["Web Developer "],
-      typeSpeed: 40,
+      // strings: ["Software Engineer, Web Developer, Freelancer "],
+      typeSpeed: 30,
       backSpeed: 40,
       loop: true,
       showCursor: false,

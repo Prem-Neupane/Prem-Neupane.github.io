@@ -4,10 +4,12 @@ import { Container, Row } from "react-bootstrap";
 import ExperienceCard from "../components/ExperienceCard";
 import TitleBar from "../components/TitleBar";
 
-import SwivtLogo from "../assets/webp/swivt.webp";
+import GrafiOffshoreLogo from "../assets/webp/grafiOffshoreNepal.webp";
+import SwivtLogo from "../assets/jpg/swivt.webp";
 import WebrootNepalLogo from "../assets/webp/webrootnepal.webp";
 import BootwalRDLogo from "../assets/webp/bootwalrd.webp";
 
+import GrafiOffshoreFallbackLogo from "../assets/jpg/grafiOffshoreNepal.jpg";
 import SwivtFallbackLogo from "../assets/jpg/swivt.jpg";
 import WebrootNepalFallbackLogo from "../assets/jpg/webrootnepal.jpg";
 import BootwalRDFallbackLogo from "../assets/jpg/bootwalrd.jpg";
@@ -24,30 +26,32 @@ class Experience extends Component {
           style={{ flexDirection: "column" }}
         >
           <TitleBar title="Current Involvements" />
-
-          <TitleBar title="Past Experience" />
           <Container fluid style={{ textAlign: "center" }}>
             <Row style={{ display: "inline-flex" }}>
-              {/* <ExperienceCard
-                    image={BootwalRDLogo}
-                    fallback_image={BootwalRDFallbackLogo}
-                    title="Internship @ junior backend developer "
-                    organization="Bootwal Research And Development Pvt. Ltd"
-                    address="Butwal-13, Janakinagar"
-                    alternateTitle="Butwal-13, Janakinagar"
-                    duration="Oct 2016 - Jan 2017"
-                    details={
-                      <React.Fragment>
-                        • Design Schema
-                        <br />
-                        • Developing a website
-                        <br />
-                        • User acceptance testing
-                      </React.Fragment>
-                    }
-                  /> */}
+              <ExperienceCard
+                image={GrafiOffshoreLogo}
+                fallback_image={GrafiOffshoreFallbackLogo}
+                title="Ast software engineer "
+                organization="Grafioffshore Nepal Pvt. Ltd"
+                address="Sanepa-2, Lalitpur"
+                alternateTitle="Sanepa-2, Lalitpur"
+                duration="Dec 2021 - preset"
+                details={
+                  <React.Fragment>
+                    • Design Schema
+                    <br />
+                    • Developing a website
+                    <br />
+                    • Developing a web app
+                    <br />
+                    • QA testing
+                  </React.Fragment>
+                }
+              />
             </Row>
           </Container>
+
+          <TitleBar title="Past Experience" />
           <Container fluid style={{ textAlign: "center" }}>
             <Row style={{ display: "inline-flex" }}>
               <ExperienceCard
