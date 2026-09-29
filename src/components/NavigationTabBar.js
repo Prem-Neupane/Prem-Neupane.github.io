@@ -13,12 +13,12 @@ const NavigationTabBar = (props) => {
       variant="dark"
       expand="lg"
     >
-      <Navbar.Brand href="/">Prem Neupane - Software Engineer</Navbar.Brand>
+      <Navbar.Brand href="/">Prem Neupane - Lead Software Engineer</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto nav-menu">
           {props.tabs.map((tab) => (
-            <NavLink onClick={() => props.setTab(tab)}>
+            <NavLink key={tab} onClick={() => props.setTab(tab)}>
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </NavLink>
           ))}

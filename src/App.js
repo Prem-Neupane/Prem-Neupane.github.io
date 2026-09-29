@@ -6,10 +6,10 @@ import Footer from "./components/Footer";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
-const Education = lazy(() => import("./pages/Education"));
 const Experience = lazy(() => import("./pages/Experience"));
-const Projects = lazy(() => import("./pages/Projects"));
 const Skills = lazy(() => import("./pages/Skills"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Education = lazy(() => import("./pages/Education"));
 const Achievements = lazy(() => import("./pages/Achievements"));
 const Error404 = lazy(() => import("./pages/Error404"));
 
@@ -30,8 +30,15 @@ class App extends React.Component {
     this.state = {
       currentTab: "home",
     };
-    // this.componentList = ["home", "about", "education", "experience", "projects", "skills", "achievements"];
-    this.componentList = ["home", "about", "education", "experience", "skills"];
+    this.componentList = [
+      "home",
+      "about",
+      "experience",
+      "skills",
+      "projects",
+      "education",
+      "achievements",
+    ];
   }
 
   setTab = (newTab) => {
@@ -44,14 +51,14 @@ class App extends React.Component {
         return <Home />;
       case "about":
         return <About />;
-      case "education":
-        return <Education />;
       case "experience":
         return <Experience />;
-      case "projects":
-        return <Projects />;
       case "skills":
         return <Skills />;
+      case "projects":
+        return <Projects />;
+      case "education":
+        return <Education />;
       case "achievements":
         return <Achievements />;
       default:
