@@ -24,15 +24,15 @@
     "typed.js": "^2.0.11"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -b master -d build",
-    "direct-deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "sitemap": "node ./src/sitemap/sitemap-generator.js",
-    "purge": "purgecss --css ./build/static/css/*.css --content ./build/index.html build/static/js/*.js --output ./dist/"
+    "predeploy": "npm run build && npm run sync:build",
+    "deploy": "npm run predeploy && node ./node_modules/gh-pages/bin/gh-pages.js -b master -d build",
+    "sync:build": "node ./scripts/sync-build.js",
+    "direct-deploy": "node ./node_modules/gh-pages/bin/gh-pages.js -b master -d build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node ./node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider node ./node_modules/react-scripts/bin/react-scripts.js build",
+    "test": "node ./node_modules/react-scripts/bin/react-scripts.js test",
+    "eject": "node ./node_modules/react-scripts/bin/react-scripts.js eject",
+    "purge": "echo \"skipped: purgecss is not a dependency\" && exit 0"
   },
   "eslintConfig": {
     "extends": [

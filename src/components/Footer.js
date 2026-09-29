@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithubSquare,
   faLinkedin,
@@ -9,65 +10,34 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
+const links = [
+  { key: "email", label: "Email", icon: faEnvelope, href: "mailto:dev.premneupane.75@gmail.com" },
+  { key: "phone", label: "Phone", icon: faPhoneAlt, href: "tel:+9779867718090" },
+  { key: "github", label: "GitHub", icon: faGithubSquare, href: "https://github.com/Prem-Neupane" },
+  { key: "linkedin", label: "LinkedIn", icon: faLinkedin, href: "https://www.linkedin.com/in/Prem-Neupane/" },
+  { key: "instagram", label: "Instagram", icon: faInstagram, href: "https://www.instagram.com/dev_prem75/" },
+  { key: "facebook", label: "Facebook", icon: faFacebookSquare, href: "https://www.facebook.com/premneupane.dev" },
+  { key: "youtube", label: "YouTube", icon: faYoutube, href: "https://www.youtube.com/c/BeautifulMind75" },
+];
+
 class Footer extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { isMobileView: false };
   }
 
   componentDidMount() {
-    window.addEventListener(
-      "load",
-      () => {
-        this.setState({
-          isMobileView: window.innerWidth < 800,
-        });
-      },
-      false
-    );
-    window.addEventListener(
-      "resize",
-      () => {
-        this.setState({
-          isMobileView: window.innerWidth < 800,
-        });
-      },
-      false
-    );
+    const update = () => this.setState({ isMobileView: window.innerWidth < 800 });
+    update();
+    window.addEventListener("resize", update);
+    this.update = update;
   }
 
   componentWillUnmount() {
-    window.removeEventListener(
-      "load",
-      () => {
-        this.setState({
-          isMobileView: window.innerWidth < 800,
-        });
-      },
-      false
-    );
-    window.removeEventListener(
-      "resize",
-      () => {
-        this.setState({
-          isMobileView: window.innerWidth < 800,
-        });
-      },
-      false
-    );
+    window.removeEventListener("resize", this.update);
   }
+
   render() {
-    const smallViewArray = this.state.isMobileView
-      ? ["", "", "", "", "", ""]
-      : [
-          "Email",
-          "Phone",
-          "GitHub",
-          "LinkedIn",
-          "Facebook",
-          "Instagram",
-          "Youtube",
-        ];
     return (
       <Navbar
         className="dark-bar"
@@ -79,41 +49,18 @@ class Footer extends React.Component {
         variant="dark"
       >
         <Nav className="mx-auto">
-          <Nav.Link
-            href="https://github.com/Prem-Neupane"
-            target="_blank"
-            rel="noopener"
-          >
-            <FontAwesomeIcon icon={faGithubSquare} /> {smallViewArray[2]}
-          </Nav.Link>
-          <Nav.Link
-            href="https://www.linkedin.com/in/prem-n-661301169/"
-            target="_blank"
-            rel="noopener"
-          >
-            <FontAwesomeIcon icon={faLinkedin} /> {smallViewArray[3]}
-          </Nav.Link>
-          <Nav.Link
-            href="https://www.facebook.com/premneupane.dev"
-            target="_blank"
-            rel="noopener"
-          >
-            <FontAwesomeIcon icon={faFacebookSquare} /> {smallViewArray[4]}
-          </Nav.Link>
-          <Nav.Link
-            href="https://www.instagram.com/prem_neupane__/"
-            target="_blank"
-            rel="noopener"
-          >
-            <FontAwesomeIcon icon={faInstagram} /> {smallViewArray[5]}
-          </Nav.Link>
-          <Nav.Link
-            href="https://www.youtube.com/c/BeautifulMind75"
-            target="_blank"
-            rel="noopener"
-          >
-            <FontAwesomeIcon icon={faYoutube} /> {smallViewArray[6]}
-          </Nav.Link>
+          {links.map((link) => (
+            <Nav.Link
+              key={link.key}
+              href={link.href}
+              target={link.key === "email" || link.key === "phone" ? undefined : "_blank"}
+              rel="noopener"
+              aria-label={link.label}
+            >
+              <FontAwesomeIcon icon={link.icon} />{" "}
+              {this.state.isMobileView ? "" : link.label}
+            </Nav.Link>
+          ))}
         </Nav>
       </Navbar>
     );

@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFileAlt,
+  faMapMarkerAlt,
+  faPhoneAlt,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
 import TitleBar from "../components/TitleBar";
 import ProfessionalHeadshot from "../assets/webp/premneupane.webp";
@@ -34,7 +39,7 @@ class About extends React.Component {
                   <img
                     className="header-img"
                     src={FallbackProfessionalHeadshot}
-                    alt="header"
+                    alt="Prem Neupane"
                     fluid
                   />
                 </picture>
@@ -55,44 +60,70 @@ class About extends React.Component {
                     margin: "0w",
                   }}
                 >
-                  BSc. CSIT Graduate form TU affilated Nepathya College. As a
-                  web developer I have worked on PHP (Laravel/Code Igniter/
-                  Yii)), JavaScript(Node, Vue) . And other good programming
-                  knowledge on C, C++, Java & Python. Through these languages I
-                  learned about the fundamental of working of programming as
-                  well as strong knowledge of Laravel framework and I can easily
-                  switch to a different language. In growing information
-                  technology, I am always evaluating and upgrading my skill.
-                  Right now, I am very eager to brush up my skills.
+                  Lead Software Engineer with 6+ years of experience designing,
+                  building and delivering web applications, backend systems,
+                  RESTful APIs and business-critical software. My core strength
+                  is PHP and Laravel, supported by hands-on work across Vue.js,
+                  JavaScript, MySQL, Docker, system architecture, database
+                  optimization and API-driven applications.
                 </p>
-                <br />
-                <br />
-
-                <p style={{ textAlign: "center", color: "blueviolet" }}>
-                  To Hier, can shoot mail me @ dev.premneupane.75@gmail.com
+                <p
+                  className="secondary-text"
+                  style={{
+                    padding: "15px 10px",
+                    textAlign: "justify",
+                    color: "#111111",
+                  }}
+                >
+                  I work end to end: technical solution design with clients,
+                  sprint planning, code reviews, team coordination and delivery.
+                  Currently at Mavorion Systems Pvt. Ltd. in Kathmandu, I lead
+                  modules of a Hospital Management System used by Norvic
+                  Hospital, TU Teaching Hospital, UCMS, Sushma Koirala Memorial
+                  Hospital and other healthcare institutions. Earlier I built
+                  Laravel, Vue.js and .NET MVC systems for Malaysian and Dutch
+                  clients at Grafi Offshore Nepal, Swivt and Webroot. Outside
+                  delivery work I explore Go/Gin, Python, cloud services and
+                  AI-assisted engineering workflows.
                 </p>
-                <br />
-                <p style={{ textAlign: "center", color: "sienna" }}>
-                  If You want to see my resume,
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col lg="8" style={{ textAlign: "center" }}>
+                <p style={{ color: "#111111" }}>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Kuleshwor,
+                  Kathmandu, Nepal
+                  <br />
+                  <FontAwesomeIcon icon={faPhoneAlt} />{" "}
+                  <a href="tel:+9779867718090">+977 986-771-8090</a>
+                  <br />
+                  <FontAwesomeIcon icon={faEnvelope} />{" "}
+                  <a href="mailto:dev.premneupane.75@gmail.com">
+                    dev.premneupane.75@gmail.com
+                  </a>
                 </p>
-                <p style={{ textAlign: "center", color: "sienna" }}>
-                  Hit me 👇🏻 a request
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col lg="8">
+                <p className="contact-note">
+                  <b>Official channels only.</b> These contact details are the
+                  only verified ways to reach me. I never charge for
+                  introductions, portfolio reviews or interview preparation, and
+                  I never ask for money, credentials, or access to your
+                  accounts. Treat any request claiming otherwise as a scam.
                 </p>
               </Col>
             </Row>
             <Row className="justify-content-center">
               <Button
                 className="resume-btn"
-                href="https://drive.google.com/file/d/1b2hWIcUOS5eo68eTA7oLxmOIrch1IRXU/view?usp=sharing"
-                // href="/resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 size="lg"
               >
                 <FontAwesomeIcon icon={faFileAlt} /> Résumé
               </Button>
-              {/* <Button className="resume-btn" href="https://www.premneupane.com.np/" target="_blank" size="lg">
-                                <FontAwesomeIcon icon={faGlobe} /> Old Website
-                            </Button> */}
             </Row>
           </Container>
         </div>
